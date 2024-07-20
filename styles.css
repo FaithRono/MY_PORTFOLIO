@@ -272,7 +272,7 @@ nav {
 }
 /* About Section */
 .about__section {
-  padding: 11rem 2rem;
+  padding: 6rem 2rem;
   background: #fff;
   margin: 3rem 0;
   text-align: center;
@@ -339,7 +339,7 @@ nav {
 
 /* Portfolio Section */
 .portfolio__section {
-  padding: 2rem;
+  padding: 6rem 2rem;
   background: #fff;
   margin: 3rem 0;
   text-align: center;
@@ -494,7 +494,7 @@ nav {
   text-decoration: underline;
 }
 .skills__section {
-  padding: 7rem 2rem;
+  padding: 6rem 2rem;
   background-color: #f4f4f4;
 
 }
