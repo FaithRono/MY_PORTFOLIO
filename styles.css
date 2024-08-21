@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --primary-color: #ff014f;
+  --primary-color: #f9608e;
   --text-dark: #222222;
   --white: #ffffff;
   --max-width: 1200px;
@@ -264,12 +264,16 @@ nav {
 
   .links {
     justify-content: flex-start;
+    gap: 1rem;
   }
 
   .links h4 {
     text-align: left;
   }
 }
+
+
+
 /* About Section */
 .about__section {
   padding: 6rem 2rem;
@@ -281,19 +285,21 @@ nav {
 .about__section h2 {
   margin-bottom: 2rem;
   color: #333;
+  font-size: 3rem;
 }
 
 .about__section p {
   max-width: 800px;
   margin: auto;
-  color: #555;
+  color: #030202;
   margin-bottom: 1.5rem;
+  font-size: 1.5rem;
 }
 
 /* Services Section */
 .services__section {
   padding: 4rem 2rem;
-  background: #f9f9f9;
+  background: transparent;
   margin: 3rem 0;
   text-align: center;
 }
@@ -301,7 +307,7 @@ nav {
 .services__section h2 {
   margin-bottom: 2rem;
   color: #333;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .services__container {
@@ -333,14 +339,14 @@ nav {
 }
 
 .service__card p {
-  color: #555;
-  font-size: 1rem;
+  color: #000000;
+  font-size: 1.2rem;
 }
 
 /* Portfolio Section */
 .portfolio__section {
   padding: 6rem 2rem;
-  background: #fff;
+  background: transparent;
   margin: 3rem 0;
   text-align: center;
 }
@@ -348,6 +354,7 @@ nav {
 .portfolio__section h2 {
   margin-bottom: 2rem;
   color: #333;
+  font-size: 3rem;
 }
 
 .portfolio__grid {
@@ -381,6 +388,8 @@ nav {
 .portfolio__item h3 {
   margin: 1rem 0;
   color: #333;
+  font-size: 1.5rem;
+  text-decoration: underline;
 }
 
 .portfolio__item p {
@@ -395,7 +404,7 @@ nav {
 }
 
 .portfolio__buttons .btn {
-  background-color: #e91e63;
+  background-color: #f9608e;
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -404,15 +413,15 @@ nav {
 }
 
 .portfolio__buttons .btn:hover {
-  background-color: #d81b60;
+  background-color: #322027;
   transform: scale(1.1);
 }
 
 
 /* Contact Section */
 .contact__section {
-  padding: 6rem 2rem;
-  background: #f9f9f9;
+  padding: 9rem 2rem;
+  
   margin: 3rem 0;
   text-align: center;
 }
@@ -420,6 +429,7 @@ nav {
 .contact__section h2 {
   margin-bottom: 2rem;
   color: #333;
+  font-size: 3rem;
 }
 
 .contact__container {
@@ -468,12 +478,13 @@ nav {
   flex: 1;
   max-width: 400px;
   text-align: left;
-  color: #555;
+  color: #2c2b2b;
 }
 
 .contact__info h3 {
   margin-bottom: 1rem;
   color: #333;
+  text-decoration: underline;
 }
 
 .contact__info ul {
@@ -493,10 +504,10 @@ nav {
 .contact__info ul li a:hover {
   text-decoration: underline;
 }
+
 .skills__section {
   padding: 6rem 2rem;
   background-color: #f4f4f4;
-
 }
 
 .skills__section h2 {
@@ -518,6 +529,14 @@ nav {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.skills__category:hover {
+  background-color: rgb(190, 240, 240);
+  color: black; /* Ensures text color is visible on hover */
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .skills__category h3 {

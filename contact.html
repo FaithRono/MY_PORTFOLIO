@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Contact Me | Faith Cherono</title>
+</head>
+<body>
+    <nav>
+        <div class="nav__header">
+          <div class="nav__logo">
+            <a href="#">
+              <img src="assets/logo.jpg" alt="logo" />
+            </a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="index.html#about">About Me</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="index.html#hireme" class="hire__me">Contact me</a></li>
+        </ul>
+    </nav>
+    <section class="contact__section" id="contact">
+        <h2></h2>
+        <div class="contact__container">
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+            <div class="contact__info">
+                <h3>Contact Information:</h3>
+                <ul>
+                    <li>Email: faithrono132@gmail.com</li>
+                    <li>Phone: +254 704728807</li>
+                </ul>
+            </div>
+        </div>
+        <p id="statusMessage" style="color: black; font-weight: bolder; display: none;">Thanks for reaching out!</p>
+    </section>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            try {
+                const response = await fetch('http://localhost:3000/send-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ name, email, message }),
+                });
+
+                const result = await response.text();
+                const statusMessage = document.getElementById('statusMessage');
+
+                if (response.status === 200) {
+                    statusMessage.style.color = 'green';
+                    statusMessage.textContent = 'Message sent successfully!';
+                } else {
+                    statusMessage.style.color = 'red';
+                    statusMessage.textContent = 'Failed to send message.';
+                }
+                statusMessage.style.display = 'block';
+                event.target.reset(); // Clear the form
+            } catch (error) {
+                console.error('Error:', error);
+                const statusMessage = document.getElementById('statusMessage');
+                statusMessage.style.color = 'red';
+                statusMessage.textContent = 'Failed to send message.';
+                statusMessage.style.display = 'block';
+            }
+        });
+    </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+  </body>
+</body>
+</html>

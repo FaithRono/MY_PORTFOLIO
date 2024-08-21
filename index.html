@@ -7,6 +7,8 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <link rel="stylesheet" href="styles.css" />
     <title>Backend Developer | Faith Cherono</title>
   </head>
@@ -25,10 +27,9 @@
       <ul class="nav__links" id="nav-links">
         <li><a href="#about">About Me</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact Me</a></li>
-        <li><a href="#" class="hire__me">Hire Me</a></li>
+        <li><a href="#services">What I do</a></li>
+        <li><a href="/portfolio.html">Portfolio</a></li>
+        <li><a href="/contact.html" class="hire__me">Contact me</a></li>
       </ul>
     </nav>
 
@@ -40,7 +41,7 @@
         <h5>Crafting Innovative Backend Solutions</h5>
         <h1>Hi, I am <span>Faith Cherono</span>, a Backend Developer</h1>
         <p>
-          Developing backend solutions for four years in dynamic,
+          Developing backend solutions for zero years in dynamic,
           fast-growing startups has taught me how to balance
           business objectives and technical limitations while consistently
           advocating for robust, scalable, and efficient systems.
@@ -50,18 +51,24 @@
             <h4>FIND ME</h4>
             <ul>
               <li>
-                <a href="https://github.com/FaithRono"><i class="ri-github-line"></i></a>
+                  <a href="https://github.com/FaithRono" target="_blank" aria-label="GitHub">
+                      <i class="fab fa-github"></i>
+                  </a>
               </li>
               <li>
-                <a href="https://twitter.com/Faithrono8874"><i class="ri-twitter-line"></i></a>
+                  <a href="https://twitter.com/Faithrono8874" target="_blank" aria-label="Twitter">
+                      <i class="fab fa-twitter"></i>
+                  </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/faith-cherono"><i class="ri-linkedin-line"></i></a>
+                  <a href="https://www.linkedin.com/in/faith-cherono" target="_blank" aria-label="LinkedIn">
+                      <i class="fab fa-linkedin"></i>
+                  </a>
               </li>
-            </ul>
+          </ul>
           </div>
           <div class="cv__button">
-            <a href="https://drive.google.com/file/d/1FCla41VRLu1yok0OPEr1Plqs0SEW39hw/view?usp=sharing" download>Download My CV</a>
+            <a href="https://drive.google.com/file/d/1MKkbkaQ9CzvfT5AEdhX0Y12jH_tpaXDa/view?usp=sharing" target="_blank" download>View My CV</a>
           </div>
         </div>
       </div>
@@ -89,23 +96,26 @@
             <li><i class="ri-database-2-line"></i> Databases: MongoDB</li>
             <li><i class="ri-git-line"></i> Version Control: Git, GitHub</li>
             <li><i class="ri-tools-line"></i> Tools: npm, ESLint</li>
-            <li><i class="ri-cloud-line"></i> Hosting: Heroku</li>
+            <li><i class="ri-cloud-line"></i> Hosting: Heroku, Netlify</li>
+            <li><i class="ri-docker-line"></i> Containerization: Docker</li>
           </ul>
         </div>
         <div class="skills__category">
-          <h3>Soft Skills</h3>
+          <h3>Interpersonal Skills</h3>
           <ul>
-            <li><i class="ri-lightbulb-line"></i> Problem-Solving</li>
             <li><i class="ri-chat-1-line"></i> Communication</li>
-            <li><i class="ri-flashlight-line"></i> Learning Agility</li>
-            <li><i class="ri-eye-line"></i> Attention to Detail</li>
+            <li><i class="ri-team-line"></i> Teamwork</li>
+            <li><i class="ri-lightbulb-line"></i> Problem-Solving</li>
+            <li><i class="ri-refresh-line"></i> Adaptability</li>
+            <li><i class="ri-leadership-line"></i> Leadership</li>
+            <li><i class="ri-time-line"></i> Time Management</li>
           </ul>
         </div>
       </div>
     </section>
 
     <section class="services__section" id="services">
-      <h2>Services</h2>
+      <h2>What I do</h2>
       <div class="services__container">
         <div class="service__card">
           <i class="ri-code-line"></i>
@@ -140,74 +150,7 @@
       </div>
     </section>
     
-    <section class="portfolio__section" id="portfolio">
-      <h2>Portfolio</h2>
-      <div class="portfolio__grid">
-        <div class="portfolio__item">
-          <img src="assets/project1.jpg" alt="Project 1" />
-          <h3>Project 1</h3>
-          <p>Description of project 1.</p>
-          <div class="portfolio__buttons">
-            <a href="https://github.com/yourusername/project1" class="btn">Source Code</a>
-            <a href="https://yourwebsite.com/project1" class="btn">Website Preview</a>
-          </div>
-        </div>
-        <div class="portfolio__item">
-          <img src="assets/logo.jpg" alt="Project 2" />
-          <h3>AI-IMAGE-GEN</h3>
-          <p>This is a clone of the DALL-E model and Midjourney.</p>
-          <div class="portfolio__buttons">
-            <a href="https://github.com/yourusername/ai-image-gen" class="btn">Source Code</a>
-            <a href="https://yourwebsite.com/ai-image-gen" class="btn">Website Preview</a>
-          </div>
-        </div>
-        <div class="portfolio__item">
-          <img src="assets/project3.jpg" alt="Project 3" />
-          <h3>Project 3</h3>
-          <p>Description of project 3.</p>
-          <div class="portfolio__buttons">
-            <a href="https://github.com/yourusername/project3" class="btn">Source Code</a>
-            <a href="https://yourwebsite.com/project3" class="btn">Website Preview</a>
-          </div>
-        </div>
-        <div class="portfolio__item">
-          <img src="assets/project2.jpg" alt="Project 2" />
-          <h3>Project 2</h3>
-          <p>Description of project 2.</p>
-          <div class="portfolio__buttons">
-            <a href="https://github.com/yourusername/project2" class="btn">Source Code</a>
-            <a href="https://yourwebsite.com/project2" class="btn">Website Preview</a>
-          </div>
-        </div>
-        <!-- Add more projects here -->
-      </div>
-    </section>
     
-    <section class="contact__section" id="contact">
-      <h2>Contact Me</h2>
-      <div class="contact__container">
-        <form action="#" method="POST">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-
-          <button type="submit">Send</button>
-        </form>
-        <div class="contact__info">
-          <h3>Contact Information:</h3>
-          <ul>
-            <li>Email: faithrono132@gmail.com</li>
-            <li>Phone: +254 704728807</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
   </body>

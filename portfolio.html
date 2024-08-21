@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Backend Developer | Faith Cherono</title>
+    <style>
+        .portfolio__item {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .tech-stack-card {
+            display: none;
+            background-color: aqua;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-top: 10px;
+            border-radius: 24px;
+            width: 220px; /* Set your desired width */
+            height: 280px; /* Set your desired height */
+        }
+
+        
+        .tech-stack-button {
+            padding: 10px;
+            background-color: #000000; /* Black background */
+            color: #cfbb4f; /* Gold text color */
+            border: none; /* Remove border */
+            cursor: pointer; /* Pointer cursor on hover */
+            border-radius: 5px; /* Rounded corners */
+            margin-top: 10px; /* Space above the button */
+            font-weight: bold; /* Bold text */
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+        }
+        
+        .tech-stack-button:hover {
+            background-color: #333333; /* Darker black background on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* More pronounced shadow effect on hover */
+            transform: scale(1.05); /* Slightly increase size on hover */
+        }
+        
+        
+
+        .close-btn {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            float: right;
+        }
+
+        .tech-stack-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .tech-stack-list li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .tech-stack-list i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav__header">
+            <div class="nav__logo">
+                <a href="#">
+                    <img src="assets/logo.jpg" alt="logo" />
+                </a>
+            </div>
+            <div class="nav__menu__btn" id="menu-btn">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+            <li><a href="index.html#about">About Me</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li><a href="index.html#hireme" class="hire__me">Contact me</a></li>
+        </ul>
+    </nav>
+
+    <section class="portfolio__section" id="portfolio">
+        <h2>Projects</h2>
+        <div class="portfolio__grid">
+            <!-- Project 1 -->
+            <div class="portfolio__item">
+                <img src="assets/f6.jpg" alt="f6" />
+                <h3>EHR</h3>
+                <p>Description of project 1.</p>
+                <div class="portfolio__buttons">
+                    <a href="https://github.com/yourusername/project1" class="btn">Source Code</a>
+                    <a href="https://yourwebsite.com/project1" class="btn">Website Preview</a>
+                </div>
+                <button class="tech-stack-button" onclick="toggleTechStack('tech-stack-card-1')">Tech Stack Used</button>
+            </div>
+
+            <div class="tech-stack-card" id="tech-stack-card-1">
+                
+                <h4>Tech Stack EHR:</h4>
+                <ul class="tech-stack-list">
+                    <li><i class="ri-html5-line"></i>HTML</li>
+                    <li><i class="ri-css3-line"></i>CSS</li>
+                    <li><i class="ri-javascript-line"></i>JavaScript</li>
+                    <li><i class="ri-node-tree"></i>Node.js</li>
+                    <li><i class="ri-server-line"></i>Express.js</li>
+                    <li><i class="ri-database-2-line"></i>MongoDB</li>
+                </ul>
+                <button class="close-btn" onclick="toggleTechStack('tech-stack-card-1')">Close</button>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="portfolio__item">
+                <img src="assets/43.jpg" alt="43" />
+                <h3>PERSONAL BLOG POST</h3>
+                <p>This is a clone of the DALL-E model and Midjourney.</p>
+                <div class="portfolio__buttons">
+                    <a href="https://github.com/yourusername/ai-image-gen" class="btn">Source Code</a>
+                    <a href="https://yourwebsite.com/ai-image-gen" class="btn">Website Preview</a>
+                </div>
+                <button class="tech-stack-button" onclick="toggleTechStack('tech-stack-card-2')">Tech Stack Used</button>
+            </div>
+
+            <div class="tech-stack-card" id="tech-stack-card-2">
+                <h4>Tech Stack FOR PERSONAL BLOG:</h4>
+                <ul class="tech-stack-list">
+                    <li><i class="ri-reactjs-line"></i>React.js</li>
+                    <li><i class="ri-node-tree"></i>Node.js</li>
+                    <li><i class="ri-server-line"></i>Express.js</li>
+                    <li><i class="ri-database-2-line"></i>MongoDB</li>
+                    <li><i class="ri-image-line"></i>DALL-E API</li>
+                </ul>
+                <button class="close-btn" onclick="toggleTechStack('tech-stack-card-2')">Close</button>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="portfolio__item">
+                <img src="assets/a8.png" alt="moana" />
+                <h3>MOANA</h3>
+                <p>This is a clone of the DALL-E model and Midjourney.</p>
+                <div class="portfolio__buttons">
+                    <a href="https://github.com/yourusername/ai-image-gen" class="btn">Source Code</a>
+                    <a href="https://yourwebsite.com/ai-image-gen" class="btn">Website Preview</a>
+                </div>
+                <button class="tech-stack-button" onclick="toggleTechStack('tech-stack-card-3')">Tech Stack Used</button>
+            </div>
+
+            <div class="tech-stack-card" id="tech-stack-card-3">
+                <h4>Tech Stack for MOANA:</h4>
+                <ul class="tech-stack-list">
+                    <li><i class="ri-reactjs-line"></i>React.js</li>
+                    <li><i class="ri-node-tree"></i>Node.js</li>
+                    <li><i class="ri-server-line"></i>Express.js</li>
+                    <li><i class="ri-database-2-line"></i>MongoDB</li>
+                    <li><i class="ri-image-line"></i>DALL-E API</li>
+                </ul>
+                <button class="close-btn" onclick="toggleTechStack('tech-stack-card-3')">Close</button>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="portfolio__item">
+                <img src="assets/a3.jpg" alt="kenya" />
+                <h3>TRAVEL KENYA</h3>
+                <p>This is a clone of the DALL-E model and Midjourney.</p>
+                <div class="portfolio__buttons">
+                    <a href="https://github.com/yourusername/ai-image-gen" class="btn">Source Code</a>
+                    <a href="https://yourwebsite.com/ai-image-gen" class="btn">Website Preview</a>
+                </div>
+                <button class="tech-stack-button" onclick="toggleTechStack('tech-stack-card-4')">Tech Stack Used</button>
+            </div>
+
+            <div class="tech-stack-card" id="tech-stack-card-4">
+                <h4>Tech Stack for TRAVEL KENYA:</h4>
+                <ul class="tech-stack-list">
+                    <li><i class="ri-reactjs-line"></i>React.js</li>
+                    <li><i class="ri-node-tree"></i>Node.js</li>
+                    <li><i class="ri-server-line"></i>Express.js</li>
+                    <li><i class="ri-database-2-line"></i>MongoDB</li>
+                    <li><i class="ri-image-line"></i>DALL-E API</li>
+                </ul>
+                <button class="close-btn" onclick="toggleTechStack('tech-stack-card-4')">Close</button>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="portfolio__item">
+                <img src="assets/a1.jpg" alt="healtcare" />
+                <h3>HOPE HEALTHCARE</h3>
+                <p>This is a clone of the DALL-E model and Midjourney.</p>
+                <div class="portfolio__buttons">
+                    <a href="https://github.com/yourusername/ai-image-gen" class="btn">Source Code</a>
+                    <a href="https://yourwebsite.com/ai-image-gen" class="btn">Website Preview</a>
+                </div>
+                <button class="tech-stack-button" onclick="toggleTechStack('tech-stack-card-5')">Tech Stack Used</button>
+            </div>
+
+            <div class="tech-stack-card" id="tech-stack-card-5">
+                <h4>Tech Stack for HOPE HEALTHCARE:</h4>
+                <ul class="tech-stack-list">
+                    <li><i class="ri-reactjs-line"></i>React.js</li>
+                    <li><i class="ri-node-tree"></i>Node.js</li>
+                    <li><i class="ri-server-line"></i>Express.js</li>
+                    <li><i class="ri-database-2-line"></i>MongoDB</li>
+                    <li><i class="ri-image-line"></i>DALL-E API</li>
+                </ul>
+                <button class="close-btn" onclick="toggleTechStack('tech-stack-card-5')">Close</button>
+            </div>
+
+            <!-- Repeat for other projects -->
+        </div>
+    </section>
+
+    <script>
+        function toggleTechStack(cardId) {
+            const card = document.getElementById(cardId);
+            if (card.style.display === 'none' || card.style.display === '') {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        }
+        
+    </script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+</body>
+</html>
